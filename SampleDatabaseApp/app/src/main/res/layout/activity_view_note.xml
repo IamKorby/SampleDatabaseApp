@@ -4,38 +4,40 @@
     android:padding="10dp"
     tools:context="edu.mobidev.labnotesdatabase.ViewNoteActivity">
 
-    <TextView android:text="Title placeholder" android:layout_width="match_parent"
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_title"
-        android:textSize="30sp"
-        android:layout_below="@+id/button_delete"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#111111" />
+        android:id="@+id/et_title"
+        android:hint="Title"
+        android:textSize="35sp"
+        android:layout_below="@+id/button_cancel"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
 
-    <TextView
-        android:text="Note placeholder"
-        android:layout_width="match_parent"
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_note"
-        android:textSize="20sp"
+        android:id="@+id/et_note"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/et_title"
+        android:layout_alignEnd="@+id/et_title"
         android:layout_alignParentBottom="true"
+        android:hint="Note"
         android:gravity="top"
-        android:layout_below="@+id/tv_title"
-        android:textColor="#444444" />
+        android:textSize="20sp"
+        android:layout_below="@+id/et_title"/>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_delete"
+        android:id="@+id/button_cancel"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_action_discard"
-        android:background="#6a973d"
+        android:layout_toLeftOf="@+id/button_edit"
+        android:layout_toStartOf="@+id/button_edit"
+        android:src="@drawable/ic_action_cancel"
         android:layout_marginLeft="10sp"
+        android:background="#ff0000"
         android:padding="5sp"/>
 
     <ImageButton
@@ -46,6 +48,18 @@
         android:layout_toLeftOf="@+id/button_delete"
         android:layout_toStartOf="@+id/button_delete"
         android:src="@drawable/ic_action_edit"
+        android:background="#6a973d"
+        android:layout_marginLeft="10sp"
+        android:padding="5sp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_delete"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_action_discard"
         android:background="#6a973d"
         android:layout_marginLeft="10sp"
         android:padding="5sp"/>

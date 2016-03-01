@@ -25,10 +25,6 @@
             android:name=".ViewNoteActivity"
             android:label="View Note" >
         </activity>
-        <activity
-            android:name=".EditNoteActivity"
-            android:label="Edit Note" >
-        </activity>
 
     </application>
 
